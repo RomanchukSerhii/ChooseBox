@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptionsActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/beginGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/optionsFormLayout"
+        style="@style/Form"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+        app:layout_constraintStart_toStartOf="@id/beginGuideLine"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/FormTitleHintTextView"
+            android:text="@string/options"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            style="@style/FormHintTextView"
+            android:layout_marginTop="16dp"
+            android:text="@string/select_the_number_of_boxes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+        <FrameLayout
+            android:id="@+id/spinnerFrameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_border"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTextView">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:animationCache="false" />
+
+        </FrameLayout>
+
+        <CheckBox
+            android:id="@+id/enableTimerCheckBox"
+            style="@style/FormTextView"
+            android:layout_marginStart="16dp"
+            android:text="@string/enable_timer"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerFrameLayout"
+            app:layout_constraintStart_toEndOf="@+id/spinnerFrameLayout"
+            app:layout_constraintTop_toTopOf="@+id/spinnerFrameLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/beginGuideLine"
+        app:layout_constraintTop_toBottomOf="@id/optionsFormLayout"
+        app:layout_constraintEnd_toStartOf="@id/confirm_button"/>
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@id/cancel_button"
+        app:layout_constraintTop_toTopOf="@id/cancel_button"
+        app:layout_constraintEnd_toEndOf="@id/endGuideLine"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

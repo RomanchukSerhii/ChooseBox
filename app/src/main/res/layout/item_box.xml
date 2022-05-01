@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/box_surprise"
+        android:contentDescription="@string/surprise_box"/>
+
+    <TextView
+        android:id="@+id/boxTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FormTextView"
+        tools:text="Box 1"/>
+
+</LinearLayout>

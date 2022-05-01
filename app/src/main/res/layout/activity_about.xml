@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/beginGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Form"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+        app:layout_constraintStart_toStartOf="@id/beginGuideLine"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/FormTitleHintTextView"
+            android:text="@string/about_the_application"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/appNameTextView"
+            style="@style/FormHintTextView"
+            android:layout_marginTop="16dp"
+            android:text="@string/application_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+        <TextView
+            android:id="@+id/descriptionAppNameTextView"
+            style="@style/FormTextView"
+            android:layout_marginStart="24dp"
+            android:text="@string/activity_navigation_example"
+            app:layout_constraintStart_toEndOf="@id/appNameTextView"
+            app:layout_constraintTop_toTopOf="@id/appNameTextView" />
+
+        <TextView
+            android:id="@+id/versionNameTextView"
+            style="@style/FormHintTextView"
+            android:layout_marginTop="16dp"
+            android:text="@string/version_name"
+            app:layout_constraintStart_toStartOf="@id/appNameTextView"
+            app:layout_constraintTop_toBottomOf="@id/appNameTextView" />
+
+        <TextView
+            android:id="@+id/descriptionVersionNameTextView"
+            style="@style/FormTextView"
+            android:text="@string/_1_0"
+            app:layout_constraintStart_toStartOf="@id/descriptionAppNameTextView"
+            app:layout_constraintTop_toTopOf="@id/versionNameTextView" />
+
+        <TextView
+            android:id="@+id/versionCodeTextView"
+            style="@style/FormHintTextView"
+            android:layout_marginTop="16dp"
+            android:text="@string/version_code"
+            app:layout_constraintStart_toStartOf="@id/versionNameTextView"
+            app:layout_constraintTop_toBottomOf="@id/versionNameTextView" />
+
+        <TextView
+            android:id="@+id/descriptionVersionCodeTextView"
+            style="@style/FormTextView"
+            android:text="@string/_1"
+            app:layout_constraintStart_toStartOf="@id/descriptionVersionNameTextView"
+            app:layout_constraintTop_toTopOf="@id/versionCodeTextView" />
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/ok"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/versionCodeTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
